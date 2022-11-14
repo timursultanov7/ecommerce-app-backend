@@ -1,0 +1,22 @@
+CREATE TABLE products (
+    product_id SERIAL PRIMARY KEY,
+    product_name VARCHAR(255),
+	product_category VARCHAR(255),
+	product_subcategory VARCHAR(255),
+	product_type VARCHAR(255),
+    product_description TEXT ,
+    product_price INTEGER,
+	product_image VARCHAR(255),
+	product_brand VARCHAR(255)
+	
+);
+
+INSERT INTO products (product_name, product_category, product_subcategory, product_type, product_description, product_price, product_image, product_brand)
+VALUES 
+('Red Quinoa',  'Grains', 'Red', 'Quinoa', 'Best red quinoa in the market!', 12, 'https://images.unsplash.com/photo-1586201375799-47cd24c3f595?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80', 'Pakistani Night');
+
+UPDATE products
+SET product_image = 'https://live.staticflickr.com/65535/52402145785_d63f8cb8d8_b.jpg" width="1024" height="683" alt="red-rice'
+WHERE product_id = 3;
+
+SELECT * FROM products;
